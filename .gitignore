@@ -1,0 +1,11 @@
+/.DS_Store
+/coverage
+/dist
+/build
+/generated
+/node_modules
+/package-lock.json
+/yarn.lock
+/npm-debug.log
+/my-templates/*.ejs
+/.env

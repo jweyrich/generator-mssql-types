@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es6",
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "outDir": "build",
+    "typeRoots": ["node_modules/@types"],
+    "declaration": true,
+    "rootDir": "./src",
+    "paths": {
+      "@src/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "tst"],
+  "exclude": [
+    "src/**/templates/*.ejs",
+    "node_modules",
+    "build",
+    "dist"
+  ]
+}
