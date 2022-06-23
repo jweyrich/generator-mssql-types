@@ -40,13 +40,13 @@ export type Params = {
     <%_ for (attr of data.procedure.parameters.attributes) { -%>
     <%= attr.name %><%= attr.optional ? '?' : '' %>: <%= attr.type.nativeType %>; /* <%= attr.type.commentSqlType %> */
     <%_ } -%>
-}
+};
 <%_ } -%>
 
 <%_ if (data.procedure.result.errorMessage) { -%>
 export type Result = {
     /* <%= data.procedure.result.errorMessage %> */
-}
+};
 <%_ } else if (data.procedure.result.isEmptyType) { -%>
 export type Result = void;
 <%_ } else if (data.procedure.result.isPlainType) { -%>
@@ -56,5 +56,5 @@ export type Result = {
 <%_ for (attr of data.procedure.result.attributes) { -%>
     <%= attr.name %><%= attr.optional ? '?' : '' %>: <%= attr.type.nativeType %>; /* <%= attr.type.commentSqlType %> */
 <%_ } -%>
-}
+};
 <%_ } -%>
