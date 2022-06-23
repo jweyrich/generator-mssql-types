@@ -6,11 +6,11 @@
 
 import { Datasource, IProcedureResult, Procedure, SqlTypes } from '@internal/mssql-connector';
 
-export class Repository {
+export class StoredProcedure {
     readonly _repository: Datasource;
 
-    constructor(dbUrl: string) {
-        this._repository = new Datasource(dbUrl);
+    constructor(repository: Datasource) {
+        this._repository = repository;
     }
 
     public async execute(<% if (!data.procedure.parameters.isEmptyType) { %>params: Params<% } %>): Promise<IProcedureResult<Result>> {
