@@ -52,7 +52,7 @@ export abstract class SQLMapper<ResultType> {
 
             /* Exact numerics */
             case 'bigint':
-                return { nativeType: 'number', sqlType: `BigInt()`, commentSqlType: `bigint` };
+                return { nativeType: 'bigint', sqlType: `BigInt()`, commentSqlType: `bigint` };
             case 'bit':
                 return { nativeType: 'boolean', sqlType: `Bit()`, commentSqlType: `bit` };
             case 'decimal':
