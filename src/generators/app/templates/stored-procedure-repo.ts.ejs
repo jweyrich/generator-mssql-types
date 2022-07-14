@@ -17,7 +17,7 @@ export class StoredProcedure {
         const procedure = new Procedure<Result>('<%= data.procedure.name %>');
 <%_ for (attr of data.procedure.parameters.attributes) { -%>
     <%_ if (attr.optional) { -%>
-        if (params.<%= attr.name %>) {
+        if (params.<%= attr.name %> != null) {
             procedure.addParameter('<%= attr.name %>', params.<%= attr.name %>, SqlTypes.<%= attr.type.sqlType %>);
         }
     <%_ } else { -%>
