@@ -46,6 +46,7 @@ export type Params = {
 <%_ if (data.procedure.result.errorMessage) { -%>
 export type Result = {
     /* <%= data.procedure.result.errorMessage %> */
+    _FailedToInspectTheResults: never; /* This helps making the `Result` type incompatible with others! */
 };
 <%_ } else if (data.procedure.result.isEmptyType) { -%>
 export type Result = void;
